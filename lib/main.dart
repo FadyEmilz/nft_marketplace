@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/pages/onBoarding.dart';
+import 'package:nft_marketplace/recources/route_managers.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: onBoarding(),
+      routes: routes_manager.my_routes,
+      initialRoute: routesNames.onBoarding,
     );
   }
 }
