@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class path_managers{
   static String img1 = 'assets/images/img.png';
   static String img2 = 'assets/images/img2.png';
@@ -9,4 +11,5 @@ class path_managers{
   static String img8 = 'assets/images/img8.png';
   static String img9 = 'assets/images/img9.png';
   static String img10 = 'assets/images/img10.png';
+
 }
