@@ -24,6 +24,10 @@ class _homeListaState extends State<homeLista> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: colors_managers.myPrimary,
+        title: Center(child: Text('NFT Marketplace',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25.5,color: Colors.white),)),
+      ),
       backgroundColor: colors_managers.myPrimary,
       body:
        SafeArea(

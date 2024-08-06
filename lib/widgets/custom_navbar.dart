@@ -2,14 +2,18 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nft_marketplace/recources/route_managers.dart';
 
+class CustomBottomNavigationBar extends StatefulWidget {
+  const CustomBottomNavigationBar({super.key, required this.onpressedStates, required this.onpressedHome});
+  final VoidCallback onpressedStates;
+  final VoidCallback onpressedHome;
 
-class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar(
-      {super.key });
+  @override
+  State<CustomBottomNavigationBar> createState() => _CustomBottomNavigationBarState();
+}
 
-
-  // final
+class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -37,11 +41,13 @@ class CustomBottomNavigationBar extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         IconButton(
-                          onPressed: (){},
+                          onPressed: widget.onpressedHome ,
                           icon: const Icon(Icons.home,
                               color: Colors.white, size: 39),
                         ),IconButton(
-                          onPressed: (){},
+                          onPressed: widget.onpressedStates ,
+
+
                           icon: const Icon(Icons.stacked_bar_chart,
                               color: Colors.white, size: 39),
                         ),
